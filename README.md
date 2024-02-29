@@ -10,6 +10,6 @@ docker build -t "tspmplus:${TAG}" . ``
 
 
 ## Run with
-`docker run --rm -ti -e DISABLE_AUTH=true -e PASSWORD=<YOUR_PASS> -e RSTUDIO_WHICH_R=/usr/local/bin/R  -p 127.0.0.1:8787:8787  -v .<path/to/data>:/home/rstudio/data -v <path/to/output>:/home/rstudio/output post-covid-ai:2023-09-05`
+`docker run --rm -ti -e DISABLE_AUTH=true -e PASSWORD=<YOUR_PASS> -e RSTUDIO_WHICH_R=/usr/local/bin/R  -p 127.0.0.1:8787:8787  -v .<path/to/data>:/home/rstudio/data -v <path/to/output>:/home/rstudio/output ghcr.io/jonashuegel/tspmplusdocker:2024-02-29`
 
 
