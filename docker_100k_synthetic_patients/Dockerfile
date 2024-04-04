@@ -48,5 +48,5 @@ RUN echo "setwd('/home/rstudio')" >> /home/rstudio/.Rprofile
 RUN chown -R rstudio:rstudio /home/rstudio/ 
 
 LABEL org.opencontainers.image.source=https://github.com/JonasHuegel/tSPMPlusDocker
-LABEL org.opencontainers.image.description="Docker container providng an rstudio instance with an preinstalled tSPM+ and MLHO. The container is based on the rocker/rstudio container (https://rocker-project.org/)."
-LABEL org.opencontainers.image.licenses=MIT
+LABEL org.opencontainers.image.description="Docker container providng an rstudio instance with an preinstalled tSPM+ and MLHO and the synthetic patient data and benchmark scripts used in the publication. The container is based on the rocker/rstudio container (https://rocker-project.org/)."
+LABEL org.opencontainers.image.licenses=GPLv3
