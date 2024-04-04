@@ -22,7 +22,7 @@ RUN Rscript -e "install.packages('devtools', repos='https://cran.rstudio.com', c
 RUN Rscript -e "install.packages('Rcpp', repos='https://cran.rstudio.com', clean = TRUE)" &&\
     Rscript -e "install.packages('RcppParallel', repos='https://cran.rstudio.com', clean = TRUE)"
 
-RUN Rscript -e "require(devtools); devtools::install_github('hestiri/mlho'); install.packages('pacman', clean = TRUE); pacman::p_load(igraph, data.table, devtools, backports, Hmisc, tidyr,dplyr,ggplot2,plyr,scales,readr, httr, DT, lubridate, tidyverse,reshape2,foreach,doParallel,caret,gbm,lubridate,praznik, epitools, memuse, utils, MatchIt,profmem,tictoc,microbenchmark)"
+RUN Rscript -e "require(devtools); devtools::install_github('clai-group/mlho'); install.packages('pacman', clean = TRUE); pacman::p_load(magrittr,rf,igraph, data.table, devtools, backports, Hmisc, tidyr,dplyr,ggplot2,plyr,scales,readr, httr, DT, lubridate, tidyverse,reshape2,foreach,doParallel,caret,gbm,lubridate,praznik, epitools, memuse, utils, MatchIt,profmem,tictoc,microbenchmark)"
 
 RUN  mkdir -p /home/rstudio/data/ /home/rstudio/output /home/rstudio/vignettes
 RUN git clone https://github.com/JonasHuegel/tSPMPlus_R.git &&\
@@ -40,7 +40,7 @@ RUN cd /home/rstudio/data && ls && \
     unzip wk3560f962ozlg7sd2oj1zxk73ayqvm0.zip -d syntheticData/ &&\
     rm wk3560f962ozlg7sd2oj1zxk73ayqvm0.zip
 
-RUN Rscript -e "devtools::install_github('jonashuegel/tSPMPlus_R', args='--recursive')" 
+RUN Rscript -e "devtools::install_github('jonashuegel/tSPMPlus_R')" 
 
 
 RUN echo "setwd('/home/rstudio')" >> /home/rstudio/.Rprofile
