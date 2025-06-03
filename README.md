@@ -14,3 +14,6 @@ Replace the tag with the current date or corresponding tag.
 If you build it on your own make sure that the tag matches, when pulling from the Github container registry get the corresponding tag from the packages [page](https://github.com/JonasHuegel/tSPMPlusDocker/pkgs/container/tspmplusdocker). Then run the following command replacing everything in `<>` with your own values:
 `docker run  -ti -e DISABLE_AUTH=true -e PASSWORD=<YOUR_PASS> -e RSTUDIO_WHICH_R=/usr/local/bin/R  -p 127.0.0.1:8787:8787  -v .<path/to/data>:/home/rstudio/data -v <path/to/output>:/home/rstudio/output ghcr.io/jonashuegel/tspmplusdocker:${TAG}`
 
+
+## Citation
+Please cite our publication when using the package or docker container: Hügel, J., Sax, U., Murphy, S. N. & Estiri, H. tSPM+; a high-performance algorithm for mining transitive sequential patterns from clinical data. arXiv [cs.LG] (2023) doi:10.48550/arXiv.2309.05671
